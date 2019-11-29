@@ -1,0 +1,184 @@
+17:38:47.766 [http-bio-9000-exec-5] ERROR com.sgcc.uap.rest.exception.handler.RestExceptionResolver - org.springframework.aop.AopInvocationException: AOP configuration seems to be invalid: tried calling method [public abstract void com.nari.osp.rtdb.tablenet.ITableNet.refresh() throws java.lang.RuntimeException] on target [com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder@20fdc411]; nested exception is java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:326)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at com.sun.proxy.$Proxy331.refresh(Unknown Source)
+	at com.nari.osp.tm.service.impl.TermCacheService.refreshTermChannelDataMap(TermCacheService.java:756)
+	at com.nari.osp.tm.service.impl.TermCacheService.getTermChannelDataMap(TermCacheService.java:736)
+	at com.nari.osp.tm.service.impl.TermStatService.queryTermInfosByCondition(TermStatService.java:2341)
+	at com.nari.osp.tm.service.impl.TermStatService.queryTermInfoGrid(TermStatService.java:2187)
+	at com.nari.osp.tm.controller.n.TermInfoController.queryTermInfoGrid(TermInfoController.java:251)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:213)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:96)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:617)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:578)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:80)
+	at com.sgcc.uap.kernel.spring.ModuleWebDispatcher.doDispatch(ModuleWebDispatcher.java:148)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:852)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:882)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:778)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at com.sgcc.uap.kernel.web.adaptor.ModuleServletAdaptor.service(ModuleServletAdaptor.java:80)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at com.sgcc.uap.kernel.httpservice.internal.ServletRegistration.doHandleRequest(ServletRegistration.java:170)
+	at com.sgcc.uap.kernel.httpservice.internal.AbstractRegistration.handleRequest(AbstractRegistration.java:58)
+	at com.sgcc.uap.kernel.httpservice.internal.ProxyServlet.processRequest(ProxyServlet.java:344)
+	at com.sgcc.uap.kernel.httpservice.internal.ProxyServlet.service(ProxyServlet.java:174)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextServlet.service(UapModuleContextServlet.java:169)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextFilter$FilterChainImpl.doFilter(UapModuleContextFilter.java:197)
+	at common.util.filter.Filter.doFilter(Filter.java:32)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextFilter$FilterChainImpl.doFilter(UapModuleContextFilter.java:183)
+	at com.nari.osp.security.filter.SecurityFilter.doFilter(SecurityFilter.java:39)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextFilter$FilterChainImpl.doFilter(UapModuleContextFilter.java:183)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextFilter$FilterChainImpl.doFilter(UapModuleContextFilter.java:183)
+	at com.sgcc.uap.kernel.web.server.UapModuleContextFilter.doFilter(UapModuleContextFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:110)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:494)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:169)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:104)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:1025)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:445)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1136)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:637)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:318)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318)
+	... 63 more
+
+17:39:02.795 [pool-5-thread-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+java.lang.ClassCastException: com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder cannot be cast to com.nari.osp.cache.service.CommonDataCacheService
+	at com.nari.osp.cache.service.CommonDataCacheService$$FastClassByCGLIB$$91544f46.invoke(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149) ~[net.sf.cglib_2.1.3.jar:2.1.3]
+	at org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(Cglib2AopProxy.java:618) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at com.nari.osp.cache.service.CommonDataCacheService$$EnhancerByCGLIB$$e9d78678.setValueByKey(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at com.nari.osp.pub.service.impl.CommonTreeCacheService.autoRefreshFeederTermCache(CommonTreeCacheService.java:418) ~[bundlefile/:?]
+	at com.nari.osp.pub.task.CommonTreeTask.autoRefreshFeederTermCache(CommonTreeTask.java:41) ~[bundlefile/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:64) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:53) [org.springframework_3.1.1.RELEASE.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [?:1.7.0_79]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [?:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_79]
+17:39:03.058 [pool-5-thread-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+java.lang.ClassCastException: com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder cannot be cast to com.nari.osp.cache.service.CommonDataCacheService
+	at com.nari.osp.cache.service.CommonDataCacheService$$FastClassByCGLIB$$91544f46.invoke(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149) ~[net.sf.cglib_2.1.3.jar:2.1.3]
+	at org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(Cglib2AopProxy.java:618) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at com.nari.osp.cache.service.CommonDataCacheService$$EnhancerByCGLIB$$e9d78678.setValueByKey(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at com.nari.osp.pub.service.impl.CommonTreeCacheService.autoRefreshOrgFeederCache(CommonTreeCacheService.java:307) ~[bundlefile/:?]
+	at com.nari.osp.pub.task.CommonTreeTask.autoRefreshOrgFeederCache(CommonTreeTask.java:34) ~[bundlefile/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:64) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:53) [org.springframework_3.1.1.RELEASE.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [?:1.7.0_79]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [?:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_79]
+17:39:03.074 [pool-5-thread-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+java.lang.ClassCastException: com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder cannot be cast to com.nari.osp.cache.service.CommonDataCacheService
+	at com.nari.osp.cache.service.CommonDataCacheService$$FastClassByCGLIB$$91544f46.invoke(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149) ~[net.sf.cglib_2.1.3.jar:2.1.3]
+	at org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(Cglib2AopProxy.java:618) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at com.nari.osp.cache.service.CommonDataCacheService$$EnhancerByCGLIB$$e9d78678.setValueByKey(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at com.nari.osp.pub.service.impl.CommonTreeCacheService.autoRefreshOrgData(CommonTreeCacheService.java:207) ~[bundlefile/:?]
+	at com.nari.osp.pub.task.CommonTreeTask.autoRefreshOrgData(CommonTreeTask.java:27) ~[bundlefile/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:64) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:53) [org.springframework_3.1.1.RELEASE.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [?:1.7.0_79]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [?:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_79]
+17:39:03.074 [pool-5-thread-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+org.springframework.aop.AopInvocationException: AOP configuration seems to be invalid: tried calling method [public abstract void com.nari.osp.rtdb.tablenet.ITableNet.refresh() throws java.lang.RuntimeException] on target [com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder@3a147e9]; nested exception is java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:326) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at com.sun.proxy.$Proxy302.refresh(Unknown Source) ~[?:?]
+	at com.nari.osp.pub.service.impl.CommonTreeCacheService.autoRefreshTermStatus(CommonTreeCacheService.java:432) ~[bundlefile/:?]
+	at com.nari.osp.pub.task.CommonTreeTask.autoRefreshTermStatus(CommonTreeTask.java:48) ~[bundlefile/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:64) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:53) [org.springframework_3.1.1.RELEASE.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [?:1.7.0_79]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [?:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_79]
+Caused by: java.lang.IllegalArgumentException: object is not an instance of declaring class
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:318) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	... 17 more
+17:39:03.074 [pool-5-thread-1] ERROR org.springframework.scheduling.support.TaskUtils$LoggingErrorHandler - Unexpected error occurred in scheduled task.
+java.lang.ClassCastException: com.sgcc.uap.kernel.spring.config.model.ModuleReferenceHolder cannot be cast to com.nari.osp.cache.service.CommonDataCacheService
+	at com.nari.osp.cache.service.CommonDataCacheService$$FastClassByCGLIB$$91544f46.invoke(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at net.sf.cglib.proxy.MethodProxy.invoke(MethodProxy.java:149) ~[net.sf.cglib_2.1.3.jar:2.1.3]
+	at org.springframework.aop.framework.Cglib2AopProxy$DynamicAdvisedInterceptor.intercept(Cglib2AopProxy.java:618) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at com.nari.osp.cache.service.CommonDataCacheService$$EnhancerByCGLIB$$e9d78678.getValueByKey(<generated>) ~[net.sf.cglib_2.1.3.jar:?]
+	at com.nari.osp.pub.service.impl.CommonTreeCacheService.autoRefreshModelCache(CommonTreeCacheService.java:79) ~[bundlefile/:?]
+	at com.nari.osp.pub.task.CommonTreeTask.autoRefreshModelCache(CommonTreeTask.java:20) ~[bundlefile/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.7.0_79]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57) ~[?:1.7.0_79]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.7.0_79]
+	at java.lang.reflect.Method.invoke(Method.java:606) ~[?:1.7.0_79]
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:64) ~[org.springframework_3.1.1.RELEASE.jar:?]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:53) [org.springframework_3.1.1.RELEASE.jar:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) [?:1.7.0_79]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) [?:1.7.0_79]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [?:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [?:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_79]
